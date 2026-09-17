@@ -145,9 +145,12 @@
             if (status) {
               status.setAttribute('data-visible', 'true');
               status.setAttribute('data-state', 'ok');
-              status.innerHTML = '<strong>Thank you \u2014 we have your request.</strong> ' +
-                'A member of our team will be in touch shortly. If your trip is soon, call ' +
-                '<a href="tel:+17247942440">(724) 794-2440</a> and we will get you an answer today.';
+              var isQuote = kind.toLowerCase().indexOf('quote') !== -1;
+              status.innerHTML = isQuote
+                ? '<strong>Thank you \u2014 we have your request.</strong> One of our team will follow up with a firm quote. ' +
+                  'If your trip is soon, call <a href="tel:+17247942440">(724) 794-2440</a> and we will get you an answer today.'
+                : '<strong>Thank you \u2014 your message is on its way.</strong> ' +
+                  'We answer the same business day. If it is urgent, call <a href="tel:+17247942440">(724) 794-2440</a>.';
               status.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
           })
