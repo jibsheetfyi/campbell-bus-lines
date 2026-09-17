@@ -108,6 +108,14 @@
         '\n\n— Sent from the Campbell Bus Lines website.';
 
       var status = form.querySelector('.form-status');
+      if (!status) {
+        status = document.createElement('div');
+        status.className = 'form-status';
+        status.setAttribute('role', 'status');
+        status.setAttribute('aria-live', 'polite');
+        var anchor = form.querySelector('button[type="submit"]');
+        if (anchor) form.insertBefore(status, anchor); else form.appendChild(status);
+      }
       var endpoint = form.getAttribute('data-endpoint');
 
       /* honeypot: bots fill hidden fields, people never see them */
