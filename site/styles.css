@@ -505,3 +505,17 @@ p { text-wrap: pretty; }
 .caption { margin-top: var(--space-3); font-size: var(--text-sm); color: var(--color-text-muted); }
 
 video.video { display: block; width: 100%; height: auto; object-fit: cover; background: var(--color-ink); }
+
+/* form status: success / error states */
+.form-status[data-state="ok"] {
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-surface-2);
+  padding: var(--space-5);
+  border-radius: var(--radius-sm, 6px);
+}
+.form-status[data-state="error"] {
+  border-left: 3px solid #a4262c;
+  background: var(--color-surface-2);
+  padding: var(--space-5);
+  border-radius: var(--radius-sm, 6px);
+}

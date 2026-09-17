@@ -107,8 +107,56 @@
       var body = kind + ' from campbellbuslines.com\n\n' + lines.join('\n') +
         '\n\n— Sent from the Campbell Bus Lines website.';
 
-      var href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       var status = form.querySelector('.form-status');
+      var endpoint = form.getAttribute('data-endpoint');
+
+      /* honeypot: bots fill hidden fields, people never see them */
+      if (form.elements._gotcha && form.elements._gotcha.value) return;
+
+      if (endpoint && endpoint.indexOf('REPLACE') === -1) {
+        var btn = form.querySelector('button[type="submit"], .btn--primary');
+        var btnText = btn ? btn.innerHTML : '';
+        if (btn) { btn.disabled = true; btn.innerHTML = 'Sending\u2026'; }
+        if (status) {
+          status.setAttribute('data-visible', 'true');
+          status.removeAttribute('data-state');
+          status.innerHTML = 'Sending your request\u2026';
+        }
+
+        var data = new FormData(form);
+        data.append('_subject', subject);
+        data.append('Form', kind);
+        data.append('Submitted from', window.location.href);
+
+        fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+          .then(function (r) { return r.ok ? r.json() : r.json().then(function (j) { throw j; }); })
+          .then(function () {
+            form.reset();
+            if (btn) { btn.disabled = false; btn.innerHTML = btnText; }
+            if (status) {
+              status.setAttribute('data-visible', 'true');
+              status.setAttribute('data-state', 'ok');
+              status.innerHTML = '<strong>Thank you \u2014 we have your request.</strong> ' +
+                'A member of our team will be in touch shortly. If your trip is soon, call ' +
+                '<a href="tel:+17247942440">(724) 794-2440</a> and we will get you an answer today.';
+              status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          })
+          .catch(function () {
+            if (btn) { btn.disabled = false; btn.innerHTML = btnText; }
+            if (status) {
+              status.setAttribute('data-visible', 'true');
+              status.setAttribute('data-state', 'error');
+              status.innerHTML = '<strong>That did not send.</strong> Please call ' +
+                '<a href="tel:+17247942440">(724) 794-2440</a> or email ' +
+                '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a> and we will take care of you.';
+            }
+          });
+        return;
+      }
+
+      /* fallback: no endpoint configured — hand off to the visitor's mail app */
+      var href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       if (status) {
         status.setAttribute('data-visible', 'true');
         status.innerHTML = 'Your email app is opening with this ready to send to <strong>' + EMAIL +

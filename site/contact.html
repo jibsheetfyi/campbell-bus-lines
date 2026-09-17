@@ -112,7 +112,8 @@
           <p class="lede">For anything that is not a charter request or a job application &mdash; questions, invoices, lost items, or a trip you are still thinking through.</p>
         </div>
         <div class="panel reveal" style="max-width:44rem">
-          <form class="form" data-quote-form data-kind="Website message" novalidate>
+          <form class="form" data-quote-form data-kind="Website message" data-endpoint="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" novalidate>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
             <div class="form__row">
               <div class="field">
                 <label for="c-name">Your name</label>
@@ -138,7 +139,7 @@
               <textarea id="c-message" name="message" rows="5" required></textarea>
             </div>
             <button class="btn btn--primary" type="submit">Send message <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></button>
-            <p class="form__note">This opens your email program with the message filled in, addressed to our office.</p>
+            <p class="form__note">Goes straight to our office. We answer the same business day.</p>
           </form>
         </div>
       </div>

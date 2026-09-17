@@ -92,7 +92,8 @@
               <div class="panel reveal">
         <h2 style="font-size:var(--text-xl);margin-bottom:var(--space-3)">Trip details</h2>
         <p class="muted" style="margin-bottom:var(--space-8);max-width:52ch">Submitting opens a pre-filled email in your mail app so you can review it before it goes to our office.</p>
-        <form class="form" data-quote-form novalidate>
+        <form class="form" data-quote-form data-kind="Charter quote request" data-endpoint="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" novalidate>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
           <div class="form__row">
             <div class="field">
               <label for="q-name">Your name</label>
@@ -159,7 +160,7 @@
           <div class="form-status" role="status" aria-live="polite"></div>
           <div style="display:flex;flex-wrap:wrap;gap:var(--space-4);align-items:center">
             <button class="btn btn--primary" type="submit">Email this request <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></button>
-            <span class="form__note">Opens in your email app, addressed to tc@campbelltours.com. Prefer to talk? Call (724) 794-2440.</span>
+            <span class="form__note">Sent straight to our dispatch office. Prefer to talk? Call (724) 794-2440.</span>
           </div>
         </form>
       </div>
