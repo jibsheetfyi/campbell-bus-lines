@@ -125,6 +125,7 @@
 
         var data = new FormData(form);
         data.append('_subject', subject);
+        if (form.elements.email && form.elements.email.value.trim()) data.append('_replyto', form.elements.email.value.trim());
         data.append('Form', kind);
         data.append('Submitted from', window.location.href);
 
