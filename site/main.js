@@ -145,8 +145,14 @@
             if (status) {
               status.setAttribute('data-visible', 'true');
               status.setAttribute('data-state', 'ok');
-              var isQuote = kind.toLowerCase().indexOf('quote') !== -1;
-              status.innerHTML = isQuote
+              var k = kind.toLowerCase();
+              var isQuote = k.indexOf('quote') !== -1;
+              var isDriver = k.indexOf('driver') !== -1;
+              status.innerHTML = isDriver
+                ? '<strong>Thank you \u2014 we have your information.</strong> ' +
+                  'Someone from dispatch will call you at the time you gave us. ' +
+                  'If you would rather reach us first, call <a href="tel:+17247942440">(724) 794-2440</a>.'
+                : isQuote
                 ? '<strong>Thank you \u2014 we have your request.</strong> One of our team will follow up with a firm quote. ' +
                   'If your trip is soon, call <a href="tel:+17247942440">(724) 794-2440</a> and we will get you an answer today.'
                 : '<strong>Thank you \u2014 your message is on its way.</strong> ' +
