@@ -21,7 +21,7 @@
     "description": "Family-owned charter bus and motorcoach company in Slippery Rock, PA, operating Prevost H3-45 and Temsa TS 30 motorcoaches.",
     "telephone": "+1-724-794-2440",
     "email": "tc@campbelltours.com",
-    "url": "https://campbellbuslines.example",
+    "url": "https://campbell-bus-lines.onrender.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "258 Grove City Rd",
@@ -48,7 +48,14 @@
       </a>
       <nav class="nav" id="primary-nav" data-open="false" aria-label="Primary">
           <a href="charters.html">Charter Services</a>
-          <a href="fleet.html">Our Fleet</a>
+          <div class="nav__group" data-nav-group>
+            <a class="nav__group-link" href="fleet.html">Our Fleet<svg class="nav__caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+            <div class="submenu">
+              <a href="fleet.html"><span class="submenu__name">Fleet overview</span><span class="submenu__meta">Both coaches, side by side</span></a>
+              <a href="coach-h3-45.html"><span class="submenu__name">Prevost H3-45</span><span class="submenu__meta">45 ft &middot; 56 passengers</span></a>
+              <a href="coach-ts-30.html"><span class="submenu__name">Temsa TS 30</span><span class="submenu__meta">31 ft &middot; 34 passengers</span></a>
+            </div>
+          </div>
           <a href="about.html">About</a>
           <a href="drivers.html">Drive With Us</a>
           <a href="contact.html">Contact</a>
@@ -192,15 +199,15 @@
         </div>
         <div class="showroom showroom--2up">
           <article class="coach reveal">
-            <div class="coach__media">
+            <a class="coach__media" href="coach-h3-45.html" aria-label="Prevost H3-45 — full detail page">
               <picture>
                 <source media="(max-width: 760px)" srcset="assets/coach-h345-mobile.jpg">
                 <img src="assets/coach-h345.jpg" alt="A white Prevost H3-45 luxury touring motorcoach in Campbell livery" width="1600" height="1066" loading="lazy">
               </picture>
-            </div>
+            </a>
             <div class="coach__body">
               <div class="coach__head">
-                <h3 class="coach__name">Prevost H3-45</h3>
+                <h3 class="coach__name"><a href="coach-h3-45.html">Prevost H3-45</a></h3>
                 <span class="coach__sub">45 ft &middot; 56 passengers</span>
               </div>
               <p class="coach__lede">The coach touring artists and professional teams ride. Sits high for better sightlines and carries the largest luggage volume in its class.</p>
@@ -209,15 +216,15 @@
             </div>
           </article>
           <article class="coach reveal">
-            <div class="coach__media">
+            <a class="coach__media" href="coach-ts-30.html" aria-label="Temsa TS 30 — full detail page">
               <picture>
                 <source media="(max-width: 760px)" srcset="assets/coach-ts30-mobile.jpg">
                 <img src="assets/coach-ts30.jpg" alt="A white Temsa TS 30 mid-size coach in Campbell livery" width="1600" height="1066" loading="lazy">
               </picture>
-            </div>
+            </a>
             <div class="coach__body">
               <div class="coach__head">
-                <h3 class="coach__name">Temsa TS 30</h3>
+                <h3 class="coach__name"><a href="coach-ts-30.html">Temsa TS 30</a></h3>
                 <span class="coach__sub">31 ft &middot; 34 passengers</span>
               </div>
               <p class="coach__lede">A true coach in a shorter body — underfloor luggage, reclining seats, and a restroom, but easier on tight campus drives and village streets.</p>

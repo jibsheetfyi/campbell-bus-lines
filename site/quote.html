@@ -21,7 +21,7 @@
     "description": "Family-owned charter bus and motorcoach company in Slippery Rock, PA, operating Prevost H3-45 and Temsa TS 30 motorcoaches.",
     "telephone": "+1-724-794-2440",
     "email": "tc@campbelltours.com",
-    "url": "https://campbellbuslines.example",
+    "url": "https://campbell-bus-lines.onrender.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "258 Grove City Rd",
@@ -48,7 +48,14 @@
       </a>
       <nav class="nav" id="primary-nav" data-open="false" aria-label="Primary">
           <a href="charters.html">Charter Services</a>
-          <a href="fleet.html">Our Fleet</a>
+          <div class="nav__group" data-nav-group>
+            <a class="nav__group-link" href="fleet.html">Our Fleet<svg class="nav__caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+            <div class="submenu">
+              <a href="fleet.html"><span class="submenu__name">Fleet overview</span><span class="submenu__meta">Both coaches, side by side</span></a>
+              <a href="coach-h3-45.html"><span class="submenu__name">Prevost H3-45</span><span class="submenu__meta">45 ft &middot; 56 passengers</span></a>
+              <a href="coach-ts-30.html"><span class="submenu__name">Temsa TS 30</span><span class="submenu__meta">31 ft &middot; 34 passengers</span></a>
+            </div>
+          </div>
           <a href="about.html">About</a>
           <a href="drivers.html">Drive With Us</a>
           <a href="contact.html">Contact</a>
@@ -84,6 +91,7 @@
             <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Pickup and destination,</strong> plus any stops along the way.</span></li>
             <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Special needs</strong> — equipment, luggage volume, accessibility, or overnight parking.</span></li>
           </ul>
+          <p style="margin:calc(var(--space-10) * -1 + var(--space-6)) 0 var(--space-10)"><a class="link-arrow" href="fleet.html">Not sure which coach you need? Compare them <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
           <dl class="contact-list">
             <div><dt>Prefer to call</dt><dd><a href="tel:+17247942440">(724) 794-2440</a><br><a href="tel:+18005077470">(800) 507-7470</a> toll free</dd></div>
             <div><dt>Email directly</dt><dd><a href="mailto:tc@campbelltours.com">tc@campbelltours.com</a></dd></div>

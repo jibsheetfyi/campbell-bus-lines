@@ -21,7 +21,7 @@
     "description": "Family-owned charter bus and motorcoach company in Slippery Rock, PA, operating Prevost H3-45 and Temsa TS 30 motorcoaches.",
     "telephone": "+1-724-794-2440",
     "email": "tc@campbelltours.com",
-    "url": "https://campbellbuslines.example",
+    "url": "https://campbell-bus-lines.onrender.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "258 Grove City Rd",
@@ -48,7 +48,14 @@
       </a>
       <nav class="nav" id="primary-nav" data-open="false" aria-label="Primary">
           <a href="charters.html">Charter Services</a>
-          <a href="fleet.html">Our Fleet</a>
+          <div class="nav__group" data-nav-group>
+            <a class="nav__group-link" href="fleet.html" aria-current="page">Our Fleet<svg class="nav__caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+            <div class="submenu">
+              <a href="fleet.html"><span class="submenu__name">Fleet overview</span><span class="submenu__meta">Both coaches, side by side</span></a>
+              <a href="coach-h3-45.html"><span class="submenu__name">Prevost H3-45</span><span class="submenu__meta">45 ft &middot; 56 passengers</span></a>
+              <a href="coach-ts-30.html" aria-current="page"><span class="submenu__name">Temsa TS 30</span><span class="submenu__meta">31 ft &middot; 34 passengers</span></a>
+            </div>
+          </div>
           <a href="about.html">About</a>
           <a href="drivers.html">Drive With Us</a>
           <a href="contact.html">Contact</a>
@@ -85,6 +92,12 @@
     <section class="vstats">
       <div class="wrap vstats__grid"><div class="vstats__cell"><div class="vstats__num">34+1</div><div class="vstats__label">Reclining seats</div></div><div class="vstats__cell"><div class="vstats__num">31 ft</div><div class="vstats__label">Overall length</div></div><div class="vstats__cell"><div class="vstats__num">27 ft 5 in</div><div class="vstats__label">Turning radius</div></div><div class="vstats__cell"><div class="vstats__num">USB-A/C</div><div class="vstats__label">At every seat</div></div></div>
     </section>
+
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><a href="fleet.html">Our Fleet</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><span aria-current="page">Temsa TS 30</span>
+      </nav>
+    </div>
 
     <section class="section">
       <div class="wrap">
@@ -177,6 +190,32 @@
       </div>
     </section>
 
+<section class="section" style="background:var(--color-surface-2)">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Next step</p>
+          <h2>Not sure this is the right coach?</h2>
+          <p class="lede">Compare the two side by side, or call and describe the group — we will tell you which one fits.</p>
+        </div>
+        <div class="nextup reveal"><a class="nextup__card" href="coach-h3-45.html">
+            <img src="assets/coach-h345.jpg" alt="" width="232" height="156" loading="lazy">
+            <div>
+              <p class="nextup__eyebrow">Bigger group</p>
+              <p class="nextup__name">Prevost H3-45</p>
+              <p class="nextup__meta">45 ft &middot; 56 passengers &middot; 460 ft&sup3; baggage</p>
+              <span class="nextup__go">See the H3-45 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </a><a class="nextup__card" href="quote.html">
+            <img src="assets/groups.jpg" alt="" width="232" height="156" loading="lazy">
+            <div>
+              <p class="nextup__eyebrow">Ready now</p>
+              <p class="nextup__name">Request the TS 30</p>
+              <p class="nextup__meta">Dates, headcount, and where you are going</p>
+              <span class="nextup__go">Start a quote <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </a></div>
+      </div>
+    </section>
     <section class="section band" style="background:var(--color-ink)">
       <div class="wrap band__inner">
         <div>
@@ -189,6 +228,58 @@
         </div>
       </div>
     </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://campbell-bus-lines.onrender.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Fleet",
+          "item": "https://campbell-bus-lines.onrender.com/fleet.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Temsa TS 30"
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "Temsa TS 30",
+      "category": "Charter motorcoach",
+      "brand": {
+        "@type": "Brand",
+        "name": "Temsa"
+      },
+      "description": "The Temsa TS 30 in the Campbell Bus Lines fleet: 34+1 reclining seats, 31 feet, onboard restroom, USB-A and USB-C at every seat, 27-foot turning radius. Charter one from Slippery Rock, PA.",
+      "image": "https://campbell-bus-lines.onrender.com/assets/coach-ts30.jpg",
+      "url": "https://campbell-bus-lines.onrender.com/coach-ts-30.html",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "url": "https://campbell-bus-lines.onrender.com/quote.html",
+        "seller": {
+          "@type": "Organization",
+          "name": "Campbell Bus Lines"
+        }
+      }
+    }
+  ]
+}
+</script>
   </main>
   <footer class="footer">
     <div class="wrap">

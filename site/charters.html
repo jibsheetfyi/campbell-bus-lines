@@ -21,7 +21,7 @@
     "description": "Family-owned charter bus and motorcoach company in Slippery Rock, PA, operating Prevost H3-45 and Temsa TS 30 motorcoaches.",
     "telephone": "+1-724-794-2440",
     "email": "tc@campbelltours.com",
-    "url": "https://campbellbuslines.example",
+    "url": "https://campbell-bus-lines.onrender.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "258 Grove City Rd",
@@ -48,7 +48,14 @@
       </a>
       <nav class="nav" id="primary-nav" data-open="false" aria-label="Primary">
           <a href="charters.html" aria-current="page">Charter Services</a>
-          <a href="fleet.html">Our Fleet</a>
+          <div class="nav__group" data-nav-group>
+            <a class="nav__group-link" href="fleet.html">Our Fleet<svg class="nav__caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+            <div class="submenu">
+              <a href="fleet.html"><span class="submenu__name">Fleet overview</span><span class="submenu__meta">Both coaches, side by side</span></a>
+              <a href="coach-h3-45.html"><span class="submenu__name">Prevost H3-45</span><span class="submenu__meta">45 ft &middot; 56 passengers</span></a>
+              <a href="coach-ts-30.html"><span class="submenu__name">Temsa TS 30</span><span class="submenu__meta">31 ft &middot; 34 passengers</span></a>
+            </div>
+          </div>
           <a href="about.html">About</a>
           <a href="drivers.html">Drive With Us</a>
           <a href="contact.html">Contact</a>
@@ -146,6 +153,34 @@
         </div>
       </div>
     </section>
+
+<section class="section" style="background:var(--color-bg)">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Pick your coach</p>
+          <h2>Which coach is your group riding?</h2>
+          <p class="lede">Every Campbell charter runs on one of two coaches. Both are ours, both are maintained in our own shop — the difference is size.</p>
+        </div>
+        <div class="nextup reveal"><a class="nextup__card" href="coach-h3-45.html">
+            <img src="assets/coach-h345.jpg" alt="" width="232" height="156" loading="lazy">
+            <div>
+              <p class="nextup__eyebrow">Full-size</p>
+              <p class="nextup__name">Prevost H3-45</p>
+              <p class="nextup__meta">45 ft &middot; 56 passengers &middot; 460 ft&sup3; baggage</p>
+              <span class="nextup__go">Explore the H3-45 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </a><a class="nextup__card" href="coach-ts-30.html">
+            <img src="assets/coach-ts30.jpg" alt="" width="232" height="156" loading="lazy">
+            <div>
+              <p class="nextup__eyebrow">Mid-size</p>
+              <p class="nextup__name">Temsa TS 30</p>
+              <p class="nextup__meta">31 ft &middot; 34 passengers &middot; 27 ft turning radius</p>
+              <span class="nextup__go">Explore the TS 30 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </a></div>
+      </div>
+    </section>
+
 
     <section class="section" style="background:var(--color-surface-2)">
       <div class="wrap" style="max-width:920px">
