@@ -782,3 +782,6 @@ a.coach__media:hover img { transform: scale(1.035); }
 @keyframes nudge { 0%,100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
 @media (prefers-reduced-motion: reduce) { .compare-hint svg { animation: none; } }
 @media (max-width: 680px) { .compare-hint { display: flex; } }
+
+.plain__row--wide { grid-template-columns: 1fr; }
+.plain__row--wide .plain__head { max-width: 62ch; }
